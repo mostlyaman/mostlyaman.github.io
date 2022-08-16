@@ -1,4 +1,4 @@
-## Source Code for mostlyaman.dev
+## Source Code for mostlyaman.github.io portfolio
 
 To view locally,
 
