@@ -1,0 +1,60 @@
+{
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-0b31d9fc.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/about.vue",
+      "pages/index.vue",
+      "layouts/default.vue"
+    ],
+    "css": [
+      "entry.2266b2d4.css"
+    ],
+    "assets": [
+      "js.48d02175.png",
+      "react.ae2c1e90.webp",
+      "vue.530b3c15.png",
+      "firebase.9a2c9080.png",
+      "sql.27e0405d.png",
+      "python.314ea70d.png",
+      "cpp.3f4d700c.png",
+      "flask.4580419e.png"
+    ]
+  },
+  "pages/about.vue": {
+    "file": "about-70de3bcb.mjs",
+    "src": "pages/about.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_SlidingBrackets-199a6efd.mjs",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "_SlidingBrackets-199a6efd.mjs": {
+    "file": "SlidingBrackets-199a6efd.mjs",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "index-7ee251ec.mjs",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_SlidingBrackets-199a6efd.mjs",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "layouts/default.vue": {
+    "file": "default-48dbb801.mjs",
+    "src": "layouts/default.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "default.476bdd8d.css"
+    ]
+  }
+}
