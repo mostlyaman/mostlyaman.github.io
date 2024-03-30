@@ -1,0 +1,409 @@
+---
+import "src/styles/fonts.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<link
+			rel="preload"
+			href="/fonts/atkinson-regular.woff"
+			as="font"
+			type="font/woff"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/atkinson-bold.woff"
+			as="font"
+			type="font/woff"
+			crossorigin
+		/>
+	</head>
+	<body
+		style="background-image: url('https://app.any.do/assets/themes/dark/hd/31.webp');"
+	>
+
+		<main class="flex h-[100vh] font-atkin">
+			<!-- Sidebar -->
+			<div class="flex flex-col gap-4 bg-black min-w-[250px] text-white">
+				<!-- Settings -->
+				<div class="flex items-center text-white ml-5 mt-5 gap-4">
+					<div class="w-10 h-10 border border-white rounded-full p-2">
+						<svg
+							class="stroke"
+							viewBox="0 0 32 32"
+							enable-background="new 0 0 32 32"
+							id="Editable-line"
+							version="1.1"
+							xml:space="preserve"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							fill="#ffffff"
+							stroke="#ffffff"
+							><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke="#CCCCCC"
+								stroke-width="0.064"></g><g id="SVGRepo_iconCarrier"
+								><circle
+									cx="16"
+									cy="16"
+									fill="none"
+									id="XMLID_224_"
+									r="4"
+									stroke="#ffffff"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-miterlimit="10"
+									stroke-width="2"></circle><path
+									d=" M27.758,10.366l-1-1.732c-0.552-0.957-1.775-1.284-2.732-0.732L23.5,8.206C21.5,9.36,19,7.917,19,5.608V5c0-1.105-0.895-2-2-2h-2 c-1.105,0-2,0.895-2,2v0.608c0,2.309-2.5,3.753-4.5,2.598L7.974,7.902C7.017,7.35,5.794,7.677,5.242,8.634l-1,1.732 c-0.552,0.957-0.225,2.18,0.732,2.732L5.5,13.402c2,1.155,2,4.041,0,5.196l-0.526,0.304c-0.957,0.552-1.284,1.775-0.732,2.732 l1,1.732c0.552,0.957,1.775,1.284,2.732,0.732L8.5,23.794c2-1.155,4.5,0.289,4.5,2.598V27c0,1.105,0.895,2,2,2h2 c1.105,0,2-0.895,2-2v-0.608c0-2.309,2.5-3.753,4.5-2.598l0.526,0.304c0.957,0.552,2.18,0.225,2.732-0.732l1-1.732 c0.552-0.957,0.225-2.18-0.732-2.732L26.5,18.598c-2-1.155-2-4.041,0-5.196l0.526-0.304C27.983,12.546,28.311,11.323,27.758,10.366z "
+									fill="none"
+									id="XMLID_242_"
+									stroke="#ffffff"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-miterlimit="10"
+									stroke-width="2"></path></g
+							></svg
+						>
+					</div>
+					<div class="flex flex-col">
+						<div class="font-bold">Aman</div>
+						<div class="text-gray-500 text-sm">Free Plan</div>
+					</div>
+				</div>
+
+				<!-- Go Premium -->
+				<button
+					class="self-center text-blue-500 border-2 border-blue-500 rounded-3xl py-2 px-10 font-poppins text-sm"
+				>
+					Go Premium
+				</button>
+
+				<!-- Menu -->
+				<div class="flex flex-col">
+					<div
+						class="text-gray-400 flex gap-2 items-center py-2 pl-5 font-atkin hover:bg-white/20"
+					>
+						<div>My Day</div>
+					</div>
+					<div class="text-gray-400 py-2 pl-5 font-atkin hover:bg-white/20">
+						Next 7 days
+					</div>
+					<div class="text-gray-400 py-2 pl-5 font-atkin hover:bg-white/20">
+						All tasks
+					</div>
+					<div class="text-gray-400 py-2 pl-5 font-atkin hover:bg-white/20">
+						My Calendar
+					</div>
+				</div>
+
+				<!-- Lists -->
+				<div class="flex font-poppins">
+					<div class="text-lg font-bold ml-5">My Lists</div>
+				</div>
+				<div class="flex flex-col">
+					<div
+						class="text-gray-400 flex gap-2 items-center py-2 pl-5 font-atkin hover:bg-white/20"
+					>
+						<div>Personal</div>
+					</div>
+					<div class="text-gray-400 py-2 pl-5 font-atkin hover:bg-white/20">
+						SIH 2023
+					</div>
+					<div class="text-gray-400 py-2 pl-5 font-atkin hover:bg-white/20">
+						Exams
+					</div>
+					<div class="text-gray-400 py-2 pl-5 font-atkin hover:bg-white/20">
+						Open Source
+					</div>
+				</div>
+
+				<!-- tags -->
+				<div class="flex font-poppins">
+					<div class="text-lg font-bold ml-5">Tags</div>
+				</div>
+				<div class="text-yellow-400 py-2 pl-5 font-atkin hover:bg-white/20">
+					# Priority
+				</div>
+			</div>
+
+			<!-- Main Content -->
+			<div class="overflow-x-auto pr-4">
+				<!-- Header -->
+				<div
+					class="flex justify-between items-center flex-1 h-[70px] text-white px-7 font-poppins"
+				>
+					<!-- Header Left -->
+					<div class="flex items-center gap-2 bg-black py-2 px-5 rounded-full">
+						<div class="font-semibold text-lg">Next 7 days</div>
+					</div>
+
+					<!-- Header Right -->
+					<div class="flex items-center gap-4 bg-black py-2 px-4 rounded-full">
+						<svg
+							class="w-6 h-6"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+								<g clip-path="url(#clip0_429_11071)">
+									<path
+										d="M12 2.99982C16.9706 2.99982 21 7.02925 21 11.9998C21 16.9704 16.9706 20.9998 12 20.9998C7.02944 20.9998 3 16.9704 3 11.9998C3 9.17255 4.30367 6.64977 6.34267 4.99982"
+										stroke="#ffffff"
+										stroke-width="2.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"></path>
+									<path
+										d="M3 4.49982H7V8.49982"
+										stroke="#ffffff"
+										stroke-width="2.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_429_11071">
+										<rect width="24" height="24" fill="white"></rect>
+									</clipPath>
+								</defs>
+							</g></svg
+						>
+						<svg
+							class="w-6 h-6"
+							viewBox="0 0 512 512"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							fill="#000000"
+							><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+								<title>support</title>
+								<g
+									id="Page-1"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g
+										id="support"
+										fill="#ffffff"
+										transform="translate(42.666667, 42.666667)"
+									>
+										<path
+											d="M379.734355,174.506667 C373.121022,106.666667 333.014355,-2.13162821e-14 209.067688,-2.13162821e-14 C85.1210217,-2.13162821e-14 45.014355,106.666667 38.4010217,174.506667 C15.2012632,183.311569 -0.101643453,205.585799 0.000508304259,230.4 L0.000508304259,260.266667 C0.000508304259,293.256475 26.7445463,320 59.734355,320 C92.7241638,320 119.467688,293.256475 119.467688,260.266667 L119.467688,230.4 C119.360431,206.121456 104.619564,184.304973 82.134355,175.146667 C86.4010217,135.893333 107.307688,42.6666667 209.067688,42.6666667 C310.827688,42.6666667 331.521022,135.893333 335.787688,175.146667 C313.347976,184.324806 298.68156,206.155851 298.667688,230.4 L298.667688,260.266667 C298.760356,283.199651 311.928618,304.070103 332.587688,314.026667 C323.627688,330.88 300.801022,353.706667 244.694355,360.533333 C233.478863,343.50282 211.780225,336.789048 192.906491,344.509658 C174.032757,352.230268 163.260418,372.226826 167.196286,392.235189 C171.132153,412.243552 188.675885,426.666667 209.067688,426.666667 C225.181549,426.577424 239.870491,417.417465 247.041022,402.986667 C338.561022,392.533333 367.787688,345.386667 376.961022,317.653333 C401.778455,309.61433 418.468885,286.351502 418.134355,260.266667 L418.134355,230.4 C418.23702,205.585799 402.934114,183.311569 379.734355,174.506667 Z M76.8010217,260.266667 C76.8010217,269.692326 69.1600148,277.333333 59.734355,277.333333 C50.3086953,277.333333 42.6676884,269.692326 42.6676884,260.266667 L42.6676884,230.4 C42.6676884,224.302667 45.9205765,218.668499 51.2010216,215.619833 C56.4814667,212.571166 62.9872434,212.571166 68.2676885,215.619833 C73.5481336,218.668499 76.8010217,224.302667 76.8010217,230.4 L76.8010217,260.266667 Z M341.334355,230.4 C341.334355,220.97434 348.975362,213.333333 358.401022,213.333333 C367.826681,213.333333 375.467688,220.97434 375.467688,230.4 L375.467688,260.266667 C375.467688,269.692326 367.826681,277.333333 358.401022,277.333333 C348.975362,277.333333 341.334355,269.692326 341.334355,260.266667 L341.334355,230.4 Z"
+										>
+										</path>
+									</g>
+								</g>
+							</g></svg
+						>
+						<svg
+							class="w-6 h-6"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+								<rect
+									x="4"
+									y="4"
+									width="16"
+									height="16"
+									rx="2"
+									stroke="#ffffff"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"></rect>
+							</g></svg
+						>
+						<svg
+							class="w-6 h-6"
+							version="1.1"
+							id="_x32_"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							viewBox="0 0 512 512"
+							xml:space="preserve"
+							fill="#000000"
+							><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+								<style type="text/css">
+									.st0 {
+										fill: #ffffff;
+									}
+								</style>
+								<g>
+									<path
+										class="st0"
+										d="M496.872,423.839l-85.357-85.358c-4.76,7.322-9.901,14.378-15.392,21.142l-31.484-31.485 c1.357-1.771,2.7-3.556,4.014-5.371c0.885-1.225,1.756-2.45,2.596-3.689c0.148-0.192,0.28-0.398,0.414-0.59 c0.855-1.254,1.711-2.523,2.538-3.792c1.8-2.744,3.526-5.518,5.179-8.351c17.691-30.174,27.857-65.291,27.857-102.725 s-10.166-72.55-27.857-102.724c-17.692-30.145-42.893-55.346-73.037-73.038C276.168,10.166,241.052,0,203.618,0 c-37.433,0-72.55,10.166-102.724,27.858c-1.239,0.723-2.464,1.461-3.689,2.228c-1.564,0.959-3.128,1.948-4.663,2.951 c-2.729,1.785-5.429,3.63-8.07,5.548c-0.886,0.634-1.756,1.284-2.627,1.933c-0.914,0.694-1.829,1.387-2.744,2.081 c-0.841,0.664-1.697,1.328-2.538,2.006c-1.653,1.328-3.29,2.671-4.899,4.058C63.402,55.7,55.7,63.402,48.662,71.665 c-1.387,1.608-2.73,3.232-4.058,4.899c-0.678,0.841-1.343,1.697-2.006,2.538c-0.694,0.915-1.387,1.83-2.08,2.744 c-0.649,0.87-1.298,1.741-1.933,2.626c-1.918,2.641-3.762,5.341-5.548,8.071c-1.004,1.535-1.992,3.099-2.951,4.663 c-0.767,1.224-1.505,2.449-2.228,3.689C10.166,131.069,0,166.186,0,203.62s10.166,72.55,27.857,102.725 c17.692,30.144,42.893,55.346,73.037,73.037c30.174,17.692,65.291,27.858,102.724,27.858c37.434,0,72.55-10.166,102.724-27.858 c1.888-1.106,3.748-2.243,5.592-3.408c0.929-0.575,1.844-1.166,2.759-1.77c1.269-0.826,2.538-1.682,3.792-2.538 c0.192-0.133,0.398-0.266,0.59-0.413c1.239-0.841,2.464-1.712,3.689-2.597c1.815-1.313,3.6-2.656,5.371-4.013l31.483,31.483 c-6.764,5.49-13.82,10.632-21.14,15.393l85.358,85.358C433.913,506.954,447.134,512,460.354,512s26.441-5.046,36.518-15.124 C517.042,476.706,517.042,444.009,496.872,423.839z M284.682,323.283c-0.413,0.295-0.826,0.575-1.254,0.841 c-0.472,0.34-0.959,0.649-1.446,0.959c-0.442,0.295-0.886,0.575-1.328,0.856c-0.576,0.369-1.15,0.723-1.726,1.062 c-0.546,0.34-1.077,0.664-1.623,0.989c-1.166,0.694-2.332,1.357-3.512,2.021c-0.089,0.059-0.177,0.104-0.28,0.162 c-0.96,0.531-1.933,1.048-2.907,1.549c-0.384,0.222-0.768,0.428-1.166,0.62c-0.767,0.398-1.549,0.782-2.33,1.166 c-1.491,0.738-2.996,1.446-4.516,2.124c-18.016,8.086-37.979,12.586-58.975,12.586c-20.996,0-40.959-4.5-58.975-12.586 c-32.403-14.519-58.518-40.635-73.037-73.037C63.52,244.58,59.02,224.616,59.02,203.62s4.5-40.96,12.586-58.976 c2.272-5.061,4.824-9.974,7.643-14.711c0.325-0.546,0.649-1.077,0.988-1.623c0.915-1.52,1.874-3.025,2.878-4.5 c0.546-0.841,1.106-1.667,1.696-2.494c0.694-1.033,1.416-2.051,2.17-3.054c1.135-1.549,2.301-3.084,3.496-4.589 c6.832-8.572,14.622-16.363,23.195-23.195c1.505-1.195,3.04-2.361,4.589-3.497c1.004-0.753,2.022-1.476,3.054-2.169 c0.827-0.59,1.653-1.151,2.494-1.697c1.476-1.003,2.981-1.962,4.5-2.877c0.546-0.34,1.077-0.664,1.623-0.989 c4.736-2.818,9.65-5.371,14.711-7.643c18.016-8.086,37.979-12.586,58.975-12.586c20.996,0,40.96,4.5,58.975,12.586 c32.402,14.519,58.518,40.635,73.037,73.037c8.086,18.016,12.586,37.98,12.586,58.976s-4.5,40.96-12.586,58.976 c-0.679,1.52-1.386,3.025-2.124,4.515c-0.384,0.782-0.768,1.564-1.166,2.332c-0.192,0.398-0.399,0.782-0.62,1.166 c-0.502,0.974-1.018,1.948-1.549,2.907c-0.059,0.103-0.103,0.192-0.162,0.28c-0.65,1.18-1.328,2.346-2.022,3.512 c-0.325,0.546-0.649,1.077-0.988,1.623c-0.339,0.576-0.694,1.151-1.063,1.726c-0.28,0.443-0.56,0.886-0.856,1.328 c-0.31,0.487-0.62,0.974-0.959,1.446c-0.265,0.428-0.546,0.841-0.841,1.254c-0.28,0.413-0.561,0.826-0.856,1.239 c-0.148,0.251-0.325,0.502-0.516,0.738c-0.324,0.487-0.679,0.989-1.033,1.476c-2.685,3.733-5.548,7.319-8.587,10.756 c-0.545,0.635-1.106,1.254-1.667,1.874c-0.723,0.797-1.446,1.594-2.184,2.361c-0.856,0.9-1.741,1.8-2.627,2.686 c-0.884,0.885-1.785,1.77-2.685,2.626c-0.767,0.738-1.564,1.46-2.361,2.184c-0.62,0.561-1.239,1.121-1.874,1.667 c-3.437,3.04-7.023,5.902-10.756,8.588c-0.487,0.354-0.989,0.708-1.476,1.033c-0.236,0.192-0.487,0.369-0.738,0.516 C285.508,322.722,285.094,323.003,284.682,323.283z"
+									></path>
+								</g>
+							</g></svg
+						>
+					</div>
+				</div>
+
+				<!-- Tasks -->
+				<div class="flex gap-4 p-4 text-white font-atkin">
+					<!-- Task - Today -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span class="font-bold">Today</span>
+							<span id="day-0" class="text-gray-400 font-bold"></span>
+						</div>
+						<!-- Task Body -->
+						<div
+							class="flex flex-col gap-2 m-2 bg-slate-200 bg-opacity-20 p-3 px-4 rounded-md"
+						>
+							<div class="">Assignment 1</div>
+						</div>
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+					<!-- Task - Day + 1 -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col h-fit">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span class="font-bold">Tomorrow</span>
+							<span id="day-1" class="text-gray-400 font-bold"></span>
+						</div>
+						<!-- Task Body -->
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+					<!-- Task - Day + 2 -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col h-fit">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span id="day-2" class="font-bold"></span>
+						</div>
+						<!-- Task Body -->
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+					<!-- Task - Day + 3 -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col h-fit">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span id="day-3" class="font-bold"></span>
+						</div>
+						<!-- Task Body -->
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+					<!-- Task - Day + 4 -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col h-fit">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span id="day-4" class="font-bold"></span>
+						</div>
+						<!-- Task Body -->
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+					<!-- Task - Day + 5 -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col h-fit">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span id="day-5" class="font-bold"></span>
+						</div>
+						<!-- Task Body -->
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+					<!-- Task - Day + 6 -->
+					<div class="bg-black flex p-2 rounded-2xl flex-col h-fit">
+						<!-- Task Heading -->
+						<div class="px-3 py-2 w-[270px]">
+							<span id="day-6" class="font-bold"></span>
+						</div>
+						<!-- Task Body -->
+
+						<!-- Task Input -->
+						<div class="px-2 my-3">
+							<input
+								type="text"
+								class="w-full bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg px-3 py-2"
+								placeholder="+   Add Task"
+							/>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// Determine current day and update page with days
+			const day = new Date().getDay()
+			const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+			for(let i=0; i<7; i++) {
+				let blk = document.getElementById(`day-${i}`)
+				if(blk) {
+					blk.innerHTML = days[(day+i)%7]
+				}	
+			}
+		</script>
+	</body>
+</html>
