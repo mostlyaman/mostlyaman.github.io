@@ -1,0 +1,15 @@
+---
+interface Props {
+  text: String
+}
+
+const { text } = Astro.props
+
+---
+
+<div class="bg-green-200 p-5 my-5 rounded">
+  <span class="text-green-800 font-bold">💡 Observation</span>
+  <div>
+    { text }
+  </div>
+</div>

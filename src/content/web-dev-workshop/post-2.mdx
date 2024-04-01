@@ -1,0 +1,256 @@
+---
+title: 'HTML Cheatsheet'
+description: 'HTML Cheatsheet for beginners'
+pubDate: 'Mar 30 2024'
+heroImage: '/blog-placeholder-3.jpg'
+---
+import Playground from "@/components/Playground.astro"
+import Remember from "@/components/Remember.astro"
+import Observation from "@/components/Observation.astro"
+import ExternalLink from "@/components/ExternalLink.astro"
+
+
+HTML is a very simple language used for giving structure to a webpage. You do not need to do specific course on HTML because it is impossible to learn HTML completely as a beginner. Instead you build your knowledge with experience. The best way to learn HTML is to build something yourself and find new things which cater to your specific needs. This cheatsheet will get you started with the most basic stuff.
+
+This cheatsheet is based on the free <a href="https://youtu.be/UB1O30fR-EE" target="__blank">HTML Crash Course by Traversy Media</a>. 
+
+## Write Hello World in HTML
+
+HTML has a well defined syntax using tags but a browser will also accept any invalid HTML code and try its best to make sense of it. Try writing this:
+
+```html
+Hello World
+```
+<div class="h-4"></div>
+
+```html
+Hello World 
+
+Hello World
+```
+
+<Playground />
+
+The lack of structure in our code gives the undesirable result in our second example. HTML parses code using the following rules.
+
+### Spaces don't count!!
+
+<Remember text="There can be only 1 space between two elements. Extra spaces and new lines are ignored." />
+
+```html
+Hello World Hello World
+```
+<div class="h-4"></div>
+
+```html
+Hello     World
+Hello World
+```
+
+<Playground />
+
+<Observation text="Both examples will give the same output." />
+
+<div class="h-10"></div>
+### Paragraph tag
+
+<Remember text="Paragraph tags are used to distinguish between different blocks of text as paragraphs. It takes the full width of the page and provides appropriate spacing between two paragraphs." />
+
+```html
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph. It will begin from a new line.</p>
+```
+
+<Playground />
+
+<Observation text="Paragraph tags adds a new line and spacing between two consecutive paragraphs." />
+
+<div class="h-10"></div>
+### Heading tags
+
+<Remember text="Heading tags are used to add titles within a webpage. There are 6 levels of headings." /> 
+
+```html
+<h1>heading 1</h1>
+<h2>heading 2</h2>
+<h3>heading 3</h3>
+<h4>heading 4</h4>
+<h5>heading 5</h5>
+<h6>heading 6</h6>
+```
+<div class="h-4"></div>
+
+```html
+<h1>Topic 1</h1>
+<h3>Subsection 1.1</h3>
+<h3>Subsection 1.2</h3>
+
+<h1>Topic 2</h1>
+<h3>Subsection 2.1</h3>
+```
+
+<Playground />
+
+<Observation text="Headings are bolder than normal text and occupy the complete width." />
+
+<div class="h-10"></div>
+### Anchor Tag
+
+<Remember text="Anchor Tags are used to add links to a web page. Links can be opened in the same tab or a new tab using the target attribute." />
+
+```html
+<a href="https://www.google.com">Redirect to google</a>
+<a href="https://www.google.com" target="__blank">
+  Redirect to google in a new tab
+</a>
+```
+
+<div class="mt-10 flex flex-row items-center justify-around">
+<ExternalLink text="Redirect to google" href="https://google.com" />
+<ExternalLink text="Redirect to google in a new tab" href="https://google.com" target="_blank" />
+</div>
+
+<Playground />
+
+<Observation text="Links are added to webpages using anchor tags. Links appear blue in color and can be opened in the same or new tab." />
+
+<div class="h-10"></div>
+### Images
+
+<Remember text="You can add images on your webpage using the img tag. You can a alternate text using the alt attribute incase the image cannot be loaded." />
+
+```html
+<img 
+  src="https://mostlyaman.github.io//blog-placeholder-3.jpg"
+  alt="Background image used for blog post"
+>
+```
+<Playground />
+
+<div class="h-10"></div>
+### Ordered Lists
+
+<Remember text="Ordered Lists add counters to the list items and increases the indentation." />
+
+```html
+<p>Most popular websites by user traffic</p>
+<ol>
+  <li>Google - 87B</li>
+  <li>Youtube - 32B</li>
+  <li>Facebook - 16B</li>
+  <li>Instagram - 6B</li>
+<ol>
+```
+<div class="h-4"></div>
+
+```html
+<p>Most popular websites by user traffic</p>
+<ol type="A" start="2">
+  <li>Google - 87B</li>
+  <li>Youtube - 32B</li>
+  <li>Facebook - 16B</li>
+  <li>Instagram - 6B</li>
+<ol>
+```
+
+<Playground />
+
+<Observation text="Ordered Lists add counters to the list. Their behaviour can be modified using the type and start attributes." /> 
+
+<div class="h-10"></div>
+### Unordered List
+
+<Remember text="Unordered Lists add bullets to the list items instead of counters." />
+
+```html
+<p>Most popular websites by user traffic</p>
+<ul>
+  <li>Google - 87B</li>
+  <li>Youtube - 32B</li>
+  <li>Facebook - 16B</li>
+  <li>Instagram - 6B</li>
+<ul>
+```
+<div class="h-4"></div>
+
+<Playground />
+
+<Observation text="Ordered Lists add counters to the list. Their behaviour can be modified using the type and start attributes." /> 
+
+<div class="h-10"></div>
+### Nested Lists
+
+<Remember text="You can nest multiple lists together." />
+
+```html
+<p>Companies with the highest Market Cap</p>
+<ol>
+  <li>Microsoft - $3.126 T</li>
+  <ul>
+    <li>Headquarters: Redmond, Washington</li>
+    <li>Revenue: $ 227 B</li>
+  </ul>
+  <li>Apple - $2.647 T</li>
+  <ul>
+    <li>Headquarters: Cupertino, California</li>
+    <li>Revenue: $ 383 B</li>
+  </ul>
+<ol>
+```
+<Playground />
+
+<div class="h-10"></div>
+### Inputs
+
+Forms in HTML can become very complicated. As a beginner, you do not have the prerequisites to appreciate the features provided by the form tag. Hence, we will look at forms in a separate module on its own.
+
+<Remember text="Input tags are used to take user input. The data accpeted by a input tag can be modified using the type attribute." />
+
+```html
+<input type="text" placeholder="Enter your name">
+<input type="email" placeholder="Enter your email">
+<input type="password" placeholder="Enter your password">
+<input type="number" placeholder="Enter your age">
+<input type="date" placeholder="Select your DOB">
+<input type="checkbox"> You accept our terms and conditions.
+```
+
+<Playground />
+
+<Observation text="Input tags can take the type and placeholder attribute to modify its behaviour." />
+
+<div class="h-10"></div>
+### Textarea
+
+<Remember text="A textarea is used to take multiple lines of input from the user eg. a blog post" />
+
+```html
+<textarea placeholder="Write your blog here"></textarea>
+```
+<Playground />
+
+<div class="h-10"></div>
+### Dropdown Menu
+
+<Remember text="Select and option tags are used to create dropdown menus. These enable the user to select a option from multiple choices." />
+
+```html
+<select>
+  <option value="M">Male</option>
+  <option value="F">Female</option>
+  <option value="X">Rather not say</option>
+</select>
+```
+
+<Playground />
+
+<div class="h-10"></div>
+### Button
+
+<Remember text="You can add buttons on your webpage using the button tag." />
+
+```html
+<button>Submit</button>
+```
+<Playground />
+
