@@ -1,0 +1,211 @@
+---
+title: 'CSS Cheatsheet'
+description: 'CSS Cheatsheet for beginners'
+pubDate: 'Mar 31 2024'
+heroImage: '/blog-placeholder-4.jpg'
+---
+import Playground from "@/components/Playground.astro"
+import Remember from "@/components/Remember.astro"
+import Observation from "@/components/Observation.astro"
+import ExternalLink from "@/components/ExternalLink.astro"
+
+
+CSS Cascading Style Sheets (CSS) serves as the design language of the web, allowing you to control the visual appearance and layout of HTML elements. This cheatsheet will introduce you to some of the most basic features of CSS. Again, you dont have to remember all of the CSS properties at once. You will gradually learn them with experience.
+
+This cheatsheet is based on the free <a href="https://youtu.be/yfoY53QXEnI" target="__blank">CSS Crash Course by Traversy Media</a>. 
+
+<div class="h-10"></div>
+### Adding CSS to HTML
+
+There are three ways to use CSS in a HTML file: using the `style attribute`, or by using the `\<style> tag`, or by including a `external css file`. You can try them in the editor below. 
+
+#### Method 1: style attribute
+
+```html
+<p
+  style="background-color: red; color: white;"
+>This is a paragraph</p>
+```
+
+<Playground />
+
+#### Method 2: style tag
+
+<div class="h-4"></div>
+```html
+<p>This is a paragraph.</p>
+<style>
+  p {
+    background-color: red;
+    color: white;
+  }
+</style>
+```
+
+<Playground />
+
+#### Method 3: External CSS File
+
+<div>HTML Code:</div>
+```html
+<p>This is a paragraph.</p>
+```
+<div class="h-4"></div>
+
+
+<div>CSS Code:</div> 
+```css
+p {
+  background-color: red;
+  color: white;
+}
+```
+
+<Playground />
+
+We will be using this method to study the most basic CSS properties in this tutorial. HTML and CSS code examples will be given separately. 
+
+<div class="h-10"></div>
+### Color
+
+<Remember text="color property is used to change the text color in a HTML element. You can provide the color name or the hex code." />
+
+<div>HTML Code</div>
+```html
+<p>This is a paragraph</p>
+```
+<div class="h-4"></div>
+
+<div>CSS Code</div>
+```css
+p {
+  color: brown;
+}
+```
+<Playground />
+
+<div class="h-10"></div>
+### Background Color
+
+<Remember text="background-color property is used to change the background color in a HTML element." />
+
+<div>HTML Code</div>
+```html
+<p>This is a paragraph</p>
+```
+<div class="h-4"></div>
+
+<div>CSS Code</div>
+```css
+p {
+  background-color: red;
+  color: white;
+}
+```
+<Playground />
+
+<div class="h-10"></div>
+### Font Properties
+
+<Remember text="font-family property can be used to change the font of the text in a HTML element. You need to import your fonts, if they are not installed already on the user's device." />
+
+Read about Web Safe fonts <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="__blank">here</a>.
+
+<Remember text="font-size property can be used to change the size of the text." />
+
+<Remember text="font-weight property can be used to change the boldness of the text." />
+
+<div>HTML Code</div>
+```html
+<p>
+CSS font properties offer versatile options to style text on web pages. 
+With properties like font-family, font-size, font-weight, and font-style,
+designers can customize typography to match the desired aesthetic and 
+enhance readability. Additionally, properties such as line-height and
+letter-spacing allow for fine-tuning text presentation for optimal 
+user experience.
+</p>
+```
+<div class="h-4"></div>
+
+<div>CSS Code</div>
+```css
+p {
+  font-family: Monospace, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+```
+<Playground />
+
+<div class="h-10"></div>
+### Width and Height
+
+<Remember text="width and height properties can be used to set the width and height of any HTML element." />
+
+<div>HTML Code</div>
+```html
+<p>This is a paragraph</p>
+```
+<div class="h-4"></div>
+
+<div>CSS Code</div>
+```css
+p {
+  background-color: red;
+  width: 500px;
+  height: 100px;
+}
+```
+<Playground />
+
+<div class="h-10"></div>
+### Text Alignment
+
+<Remember text="text-align property can be used to align the text inside a HTML element." />
+
+<div>HTML Code</div>
+```html
+<p>This is a paragraph</p>
+```
+<div class="h-4"></div>
+
+<div>CSS Code</div>
+```css
+p {
+  text-align: center;
+}
+```
+<Playground />
+
+<div class="h-10"></div>
+### Border Properties
+
+<Remember text="border property can be used to set the thickness of the border of a HTML element." />
+
+<Remember text="border-color property can be used to set the color of the border of a HTML element." />
+
+<Remember text="border-radius property can be used to round the border corners of a HTML element." />
+
+<Remember text="border-style property can be used to specify the border pattern of a HTML element." />
+
+<Remember text="border-style property can be used to specify the border pattern of a HTML element." />
+
+<div>HTML Code</div>
+```html
+<p>This is a paragraph</p>
+```
+<div class="h-4"></div>
+
+<div>CSS Code</div>
+```css
+p {
+  border: 2px;
+  border-radius: 10px;
+  border-color: blue;
+  border-style: solid;
+}
+```
+<Playground />
+
+
