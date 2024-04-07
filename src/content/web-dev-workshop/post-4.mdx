@@ -1,0 +1,175 @@
+---
+title: 'The Box Model and CSS layouts'
+description: 'Box Model concept in HTML CSS and creating layouts in HTML CSS using flexbox and grid'
+pubDate: 'Apr 07 2024'
+heroImage: '/blog-placeholder-5.jpg'
+---
+import Playground from "@/components/Playground.astro"
+import Remember from "@/components/Remember.astro"
+import Observation from "@/components/Observation.astro"
+import ExternalLink from "@/components/ExternalLink.astro"
+import BoxModelDemo from  "@/components/BoxModelDemo.astro"
+
+To make a beautiful website, it is essential to learn to manage the spacing between different elements. CSS provides us with various powerful tools to create layouts in our designs out of which, we are going to be learning about Flexbox and Grid. But before that, we need to learn about the most important HTML tag, the almighty `<div>` tag.
+
+### \<div> tag
+
+Although we have learnt many tags which are used to display text in various different forms (paragraphs, headings, lists), `<div>` tag remains the most used tag for displaying text according to <a href="https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/" target="_blank">this study</a>. `<div>` tag is the most cutomisable and can replace every other element used for displaying text using CSS. Lets learn with some examples.
+
+<Remember text="div tag can be nested to give structure to our HTML document." />
+
+Let's try to recreate this.
+
+<div style="background-color: red; color: white; padding: 10px">
+
+  <div style="display: block; margin: 10px; background-color: blue; padding: 10px">
+    <div style="display: inline; background-color: green; margin: 10px;">Row 1, Col 1</div>
+    <div style="display: inline; background-color: green; margin: 10px">Row 1, Col 2</div>
+  </div>
+
+  <div style="display: block; margin: 10px; background-color: blue; padding: 10px">
+    <div style="display: inline; background-color: green; margin: 10px">Row 1, Col 1</div>
+    <div style="display: inline; background-color: green; margin: 10px">Row 1, Col 2</div>
+  </div>
+
+</div>
+
+<div class="h-10"></div>
+
+```html
+<div style="background-color: red; color: white; padding: 10px">
+
+  <!-- Row 1 -->
+  <div style="display: block; margin: 10px; background-color: blue; padding: 10px">
+    <div style="display: inline; background-color: green; margin: 10px;">Row 1, Col 1</div>
+    <div style="display: inline; background-color: green; margin: 10px">Row 1, Col 2</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div style="display: block; margin: 10px; background-color: blue; padding: 10px">
+    <div style="display: inline; background-color: green; margin: 10px">Row 1, Col 1</div>
+    <div style="display: inline; background-color: green; margin: 10px">Row 1, Col 2</div>
+  </div>
+
+```
+
+<Playground />
+
+<Observation text="Nesting div in a HTML layout gives structure to the layout of the page which can be furthur modified by CSS properties to recreate any sort of UI." />
+
+<div class="h-10"></div>
+### Box Model Concept
+
+In HTML, spacing around and inside a element is controlled by the box model. Every element is assumed to be having three types of space: inside the element known as padding, border of the element and space outside the element known as margin.
+
+<Remember text="The width and height of a element includes the border and padding, but not the margin." />
+
+<Remember text="The background color of the element is visible in the padding." />
+
+<div class="h-10"></div>
+<BoxModelDemo />
+
+### CSS Layouts
+
+Layouts are used to arrange items from a parent element. The two most commonly used layout mechanisms in HTML are CSS Flexbox and CSS Grid.
+
+<div class="flex flex-row items-center justify-around">
+  <img src="/images/post-4/pikachu_without_css.png" alt="Pikachu without CSS" />
+  <img src="/images/post-4/pikachu_with_css.png" alt="Pikachu with CSS" />
+</div>
+
+
+<div class="text-right my-10">Image Credits: <a href="https://youtu.be/i1FeOOhNnwU" target="_blank">EdRoh on Youtube</a></div>
+
+#### Flexbox
+
+Flexbox are used to place the children of the element in a row or a column. The flexbox provides CSS properties to handle child position in both the axes of the flex box.
+
+<div class="flex flex-row items-center justify-around">
+  <img src="/images/post-4/flex-col-axis.png" class="w-1/4" alt="Pikachu without CSS" />
+  <img src="/images/post-4/flex-row-axis.png" class="w-1/2" alt="Pikachu with CSS" />
+</div>
+
+<div class="text-right my-10">Image Credits: <a href="https://youtu.be/K74l26pE4YA" target="_blank">Fireship on Youtube</a></div>
+
+<Remember text="Use display: flex to apply flexbox to a div element. Default flex-direction is row." />
+
+<Remember text="Control placement along the main axis using the justify-content property and along the cross axis using the align-content property." />
+
+```html
+<div id="parent">
+  <div class="child">Child 1</div>
+  <div class="child">Child 2</div>
+  <div class="child">Child 3</div>
+</div>
+```
+<div class="h-4"></div>
+
+```css
+#parent {
+  background-color: blue;
+  color: white;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.child {
+  background-color: red;
+}
+```
+<div class="h-10"></div>
+Learn more about CSS selectors: <a target="_blank" href="https://youtu.be/l1mER1bV0N0">Learn Every CSS Selector In 20 Minutes: Web Dev Simplified on Youtube</a>.
+
+<Playground />
+
+#### Grid
+
+CSS Grid are used to create dynamic grids of elements based on the fractional division of parent's width. Grid is described by a template which allocates fractional units to children.
+
+Learn more about CSS Grids and their use cases: <a href="https://youtu.be/705XCEruZFs" target="_blank">The Joy of CSS Grid: Fireship on Youtube</a>.
+
+```html
+<div id="parent">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+  <div class="child">4</div>
+  <div class="child">5</div>
+  <div class="child">6</div>
+  <div class="child">7</div>
+<div>
+```
+<div class="h-4"></div>
+```css
+#parent {
+  display: grid;
+  gap: 10px;
+  
+  /* explicit grids */
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  /*grid-template-columns: repeat(4, 1fr);*/
+  /*grid-template-columns: repeat(7, minmax(200px, 1fr));*/
+  
+  /* implicit grids */
+  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+}
+.child {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
+```
+<Playground />
+
+### Congrats!
+Now since you all know the basics, create a simple UI project using any of the following tutorials.
+
+<div class="flex flex-col">
+<a class="w-fit" href="https://youtu.be/0xMQfnTU6oo" target="_blank">CSS Grid Crash Course: Traversy Media on Youtube</a>
+<a class="w-fit" href="https://youtu.be/3YW65K6LcIA" target="_blank">Flexbox Crash Course 2022: Traversy Media on Youtube</a>
+<a class="w-fit" href="https://youtu.be/HXYZxVbWkjc" target="_blank">Professional Website From Scratch: Traversy Media on Youtube</a>
+<a class="w-fit" href="https://youtu.be/p0bGHP-PXD4" target="_blank">Build a Responsive Website: Traversy Media on Youtube</a>
+</div>

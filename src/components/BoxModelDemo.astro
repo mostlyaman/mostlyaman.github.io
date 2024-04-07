@@ -1,0 +1,84 @@
+
+<div class="text-2xl mb-5">Controls for Element 1</div>
+
+<div class="flex flex-row items-center justify-around">
+
+  <div class="flex flex-col items-center">
+    <div class="text-center mb-2">Margin</div>
+    <input id="margin-1" type="range" min="0" max="20" value="0"/>
+  </div>
+
+
+  <div class="flex flex-col items-center">
+    <div class="text-center mb-2">Border</div>
+    <input id="borderx-1" type="range" min="0" max="20" value="0"/>
+  </div>
+
+
+  <div class="flex flex-col items-center">
+    <div class="text-center mb-2">Padding</div>
+    <input id="padding-1" type="range" min="0" max="20" value="0"/>
+  </div>
+</div>
+
+<div class="text-2xl my-5">Controls for Element 2</div>
+
+<div class="flex flex-row items-center justify-around">
+
+  <div class="flex flex-col items-center">
+    <div class="text-center mb-2">Margin</div>
+    <input id="margin-2" type="range" min="0" max="20" value="0" />
+  </div>
+
+
+  <div class="flex flex-col items-center">
+    <div class="text-center mb-2">Border</div>
+    <input id="borderx-2" type="range" min="0" max="20" value="0" />
+  </div>
+
+
+  <div class="flex flex-col items-center">
+    <div class="text-center mb-2">Padding</div>
+    <input id="padding-2" type="range" min="0" max="20" value="0" />
+  </div>
+</div>
+
+<script>
+function updateMargin(id: Number, value: String) {
+  let el = document.getElementById(`element-${id}`)
+  if(el) el.style.margin = `${value}px`
+}
+
+
+function updateBorder(id: Number, value: String) {
+  let el = document.getElementById(`element-${id}`)
+  if(el) {
+    el.style.borderWidth = `${value}px`
+    el.style.borderColor = 'red'
+  }
+}
+
+function updatePadding(id: Number, value: String) {
+  let el = document.getElementById(`element-${id}`)
+  if(el) el.style.padding = `${value}px`
+}
+
+document.getElementById("margin-1")?.addEventListener('input', function (event) { updateMargin(1, (event?.target as HTMLInputElement).value ?? "0") })
+
+document.getElementById("margin-2")?.addEventListener('input', function (event) { updateMargin(2, (event?.target as HTMLInputElement).value ?? "0") })
+
+document.getElementById("padding-1")?.addEventListener('input', function (event) { updatePadding(1, (event?.target as HTMLInputElement).value ?? "0") })
+
+
+document.getElementById("padding-2")?.addEventListener('input', function (event) { updatePadding(2, (event?.target as HTMLInputElement).value ?? "0") })
+
+document.getElementById("borderx-1")?.addEventListener('input', function (event) { updateBorder(1, (event?.target as HTMLInputElement).value ?? "0") })
+
+document.getElementById("borderx-2")?.addEventListener('input', function (event) { updateBorder(2, (event?.target as HTMLInputElement).value ?? "0") })
+</script>
+
+
+<div class="flex flex-row items-center justify-center w-full bg-blue-400 rounded-lg my-20 py-5">
+  <div id="element-1" class="bg-blue-700 text-white">Element1</div>
+  <div id="element-2" class="bg-blue-700 text-white">Element2</div>
+</div>
