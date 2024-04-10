@@ -1,0 +1,150 @@
+---
+title: 'DOM Manipulation'
+description: 'Box Model concept in HTML CSS and creating layouts in HTML CSS using flexbox and grid'
+pubDate: 'Apr 10 2024'
+heroImage: '/blog-placeholder-3.jpg'
+---
+import Playground from "@/components/Playground.astro"
+import Remember from "@/components/Remember.astro"
+import Observation from "@/components/Observation.astro"
+import ExternalLink from "@/components/ExternalLink.astro"
+
+Javascript was designed to create dynamic webpages by interacting with HTML elements on the client side. While HTML code is static, which means it produces the same output, Javascript can manipulate the html in the browser and change anything the developer intends it to do.
+
+We will go briefly over some of the things we can do with the document object. But for a deep dive, this is a must-watch code along: <a href="https://youtube.com/playlist?list=PLarvHOyBQ1A47ptX0BRrwGRdfMgTlE4Bf&si=4eI8pB2IRtgGDbjB" target="_blank">Javascript DOM Crash Course by Traversy Media</a>
+
+### Document Object Model
+
+Within the browser context, Javscript has access to the `document` object which can be used to interact with the HTML. All the HTML elements on the page are expressed as a tree. You can add, remove or change the attributes of any element using the `document` object.
+
+<img class="mx-auto" src="/images/post-6/dom.png" alt="DOM example" />
+
+<Remember text="document.body contains all the HTML elements in the webpage in a tree-like data structure." />
+
+```html
+<h1>Heading 1</h1>
+<p>This is a paragraph.</p>
+```
+<div class="h-4"></div>
+```js
+const elements = document.body.children
+
+for(let i = 0; i<elements.length; i++) {
+  console.log(elements[i].innerText)
+}
+```
+<Playground />
+
+### Reference by ID
+
+You can reference a single element by their id. 
+
+<Remember text="Use getElementById() to search the DOM tree for specific element with a certain id you would like to interact with. Note that this return reference to the first element with the matching id." />
+
+```html
+<div style="display:flex; flex-direction: column; gap: 3px;
+    color: white">
+  <div style="background: black; padding: 20px;" id="counter-value">0</div>
+</div>
+<button onclick="increment()" style="padding: 5px; margin: 20px;">
+  Increment Counter
+</button>
+```
+<div class="h-4"></div>
+```js
+function increment () {
+  const counter = document.getElementById('counter-value')
+  const value = parseInt(counter.innerText)
+  counter.innerText = (value+1).toString()
+}
+```
+<Playground />
+
+### Reference by Class Name
+
+You can reference all the elements in the webpage having a certain class name.
+
+<Remember text="Use getElementsByClassName() to search the DOM tree for specific element's' with a certain class name you would like to interact with. Note that this returns a list containing all the elements with the matching class name." />
+
+```html
+<div style="display:flex; flex-direction: column; gap: 3px;
+    color: white">
+  <div style="background: black; padding: 20px;" class="counter-value">0</div>
+  <div style="background: black; padding: 20px;" class="counter-value">0</div>
+</div>
+<button onclick="increment()" style="padding: 5px; margin: 20px;">
+  Increment Counter
+</button>
+```
+<div class="h-4"></div>
+```js
+function increment () {
+  const counters = document.getElementsByClassName('counter-value')
+
+  for(let i=0; i<counters.length; i++) {
+    let counter = counters[i]
+    const value = parseInt(counter.innerText)
+    counter.innerText = (value+1).toString()
+  }
+}
+```
+
+<Playground />
+
+<div class="h-10"></div>
+### Query Selectors
+
+
+<Remember text="You can use querySelector() function to search for the first element matching the specified css selectors. This returns a single element." />
+
+```html
+<div class="class-1">Div 1</div>
+```
+<div class="h-4"></div>
+```js
+const el = document.querySelector(".class-1")
+console.log(el.innerText)
+```
+<Playground />
+
+
+<Remember text="You can use querySelector() function to search for the first element matching the specified css selectors. This returns a single element." />
+
+```html
+<div class="class-1">Div 1</div>
+<div class="class-1">Div 2</div>
+```
+<div class="h-4"></div>
+```js
+const elements = document.querySelectorAll(".class-1")
+
+for(let i=0; i<elements.length; i++) {
+  let el = elements[i]
+  console.log(el.innerText)
+}
+```
+<Playground />
+
+<div class="h-10"></div>
+### Change styling of a HTML element
+
+<Remember text="You can change the styling of a HTML element using the style property." />
+
+```html
+<div id="box" style="height: 20px; width: 20px margin: 20px"></div>
+<input type="text" id="color-input" placeholder="Enter Colour Name" />
+<button onclick="changeColour()"></button>
+```
+<div class="h-4"></div>
+```js
+function changeColour() {
+  const input = document.getElementById('color-input')
+  const colorName = input.value
+
+  const box = document.getElementById('box')
+  box.style.backgroundColor = colorName
+}
+
+```
+<Playground />
+
